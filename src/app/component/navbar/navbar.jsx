@@ -36,16 +36,17 @@ export default function AppBar() {
   return (
     <Navbar
         position='fixed'
+        enableColorOnDark
         sx={{
-            boxShadow: 'transparent',
+            boxShadow: 0,
             bgcolor: 'transparent',
             backgroundImage: 'none',
-            mt: '(var(--template-frame-height, 0px) + 28px)',
+            mt: 'calc(var(--template-frame-height, 0px) + 28px)',
         }}
     >
         <Container>
             <StyledToolbar variant='dense' disableGutters>
-                <Box sx={{flexGrow: 1, display: 'flex', alignItems: 'center'}}>
+                <Box sx={{flexGrow: 1, display: 'flex', alignItems: 'center', px: 0}}>
                     {/* <SiteMark /> */}
                     <Image className='pr-8' src='/topibro-logo2.png' alt='logo' width={80} height={70} style={{ objectFit: 'cover' }} />
                     <Box sx={{ display: {xs: 'none', md: 'flex'} }}>
